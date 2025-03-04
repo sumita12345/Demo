@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+    }
+
+    .form-group input[type="radio"] {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .form-group .gender {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Hospital Registration Form</h2>
+    <form action="#" method="POST">
+      <!-- Patient Information Section -->
+      <div class="form-group">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required placeholder="Enter Full Name">
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" required placeholder="Enter Contact Number">
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required placeholder="Enter Address"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Gender:</label>
+        <div class="gender">
+          <input type="radio" id="male" name="gender" value="Male" required>
+          <label for="male">Male</label>
+        </div>
+        <div class="gender">
+          <input type="radio" id="female" name="gender" value="Female" required>
+          <label for="female">Female</label>
+        </div>
+        <div class="gender">
+          <input type="radio" id="other" name="gender" value="Other" required>
+          <label for="other">Other</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="blood-group">Blood Group:</label>
+        <select id="blood-group" name="blood-group" required>
+          <option value="A+">A+</option>
+          <option value="B+">B+</option>
+          <option value="O+">O+</option>
+          <option value="AB+">AB+</option>
+          <option value="A-">A-</option>
+          <option value="B-">B-</option>
+          <option value="O-">O-</option>
+          <option value="AB-">AB-</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="disease">Any Pre-existing Diseases?</label>
+        <textarea id="disease" name="disease" rows="3" placeholder="List any pre-existing conditions"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="emergency-contact">Emergency Contact Name:</label>
+        <input type="text" id="emergency-contact" name="emergency-contact" required placeholder="Enter Emergency Contact Name">
+      </div>
+
+      <div class="form-group">
+        <label for="emergency-phone">Emergency Contact Phone Number:</label>
+        <input type="tel" id="emergency-phone" name="emergency-phone" required placeholder="Enter Emergency Phone Number">
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit Registration</button>
+    </form>
+  </div>
+
+</body>
+</html>
